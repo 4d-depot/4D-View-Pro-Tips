@@ -8,13 +8,13 @@ Function getRight($cell : Object)->$nextCell : Object
 	var $nextCol : Integer
 	
 	$range:=cs:C1710.VPRangeReader.new($cell)
-	If ($range.column()<(VP Get column count($range.areaName())-1))
+	If (($range.column()+$range.columnCount())<(VP Get column count($range.areaName())))
 		$nextCol:=$range.column()+1
 	Else 
 		$nextCol:=$range.column()
 	End if 
 	
-	$nextCell:=VP Cell($range.areaName(); $nextCol; $range.row())
+	$nextCell:=VP Cells($range.areaName(); $nextCol; $range.row(); $range.columnCount(); $range.rowCount()))
 	
 	// Returns the range of the next cell on the left
 Function getLeft($cell : Object)->$nextCell : Object
@@ -25,7 +25,7 @@ Function getLeft($cell : Object)->$nextCell : Object
 	
 	$nextCol:=Choose:C955(($range.column()-1>0); $range.column()-1; 0)
 	
-	$nextCell:=VP Cell($range.areaName(); $nextCol; $range.row())
+	$nextCell:=VP Cells($range.areaName(); $nextCol; $range.row(); $range.columnCount(); $range.rowCount())
 	
 	// Returns the range of the next cell above
 Function getAbove($cell : Object)->$nextCell : Object
@@ -36,7 +36,7 @@ Function getAbove($cell : Object)->$nextCell : Object
 	
 	$nextRow:=Choose:C955(($range.row()-1>0); $range.row()-1; 0)
 	
-	$nextCell:=VP Cell($range.areaName(); $range.column(); $nextRow)
+	$nextCell:=VP Cells($range.areaName(); $range.column(); $nextRow; $range.columnCount(); $range.rowCount())
 	
 	// Returns the range of the next cell below
 Function getBelow($cell : Object)->$nextCell : Object
@@ -45,7 +45,7 @@ Function getBelow($cell : Object)->$nextCell : Object
 	
 	$range:=cs:C1710.VPRangeReader.new($cell)
 	
-	If ($range.row()<(VP Get row count($range.areaName())-1))
+	If ($range.row()+$range.rowCount()<(VP Get row count($range.areaName())))
 		$nextRow:=$range.row()+1
 	Else 
 		$nextRow:=$range.row()
@@ -53,7 +53,7 @@ Function getBelow($cell : Object)->$nextCell : Object
 		This:C1470.areaName:=$areaName
 	End if 
 	
-	$nextCell:=VP Cell($range.areaName(); $range.column(); $nextRow)
+	$nextCell:=VP Cells($range.areaName(); $range.column(); $nextRow; $range.columnCount(); $range.rowCount())
 	
 	// Returns the range of the next empty cell on the right
 Function getNextRightEmptyCell($cell : Object)->$newCell : Object
