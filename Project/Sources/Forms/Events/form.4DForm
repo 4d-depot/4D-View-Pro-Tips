@@ -266,11 +266,35 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button17.4dm"
+				},
+				"Button18": {
+					"type": "button",
+					"text": "Hide sheet tabs",
+					"top": 36,
+					"left": 948,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button18.4dm"
+				},
+				"Button19": {
+					"type": "button",
+					"text": "Show sheet tabs",
+					"top": 59,
+					"left": 948,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button19.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 43,
+	"geometryStamp": 47,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

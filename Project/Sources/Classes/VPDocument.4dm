@@ -57,3 +57,10 @@ Function hideRibbon($hide : Boolean)
 	$js:=$js+"window.dispatchEvent(new Event('resize'));"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
+Function hideSheetTabs($hide : Boolean)
+	var $js; $anwer : Text
+	
+	$js:="Utils.spread.options.tabStripVisible  = "+Choose:C955(Bool:C1537($hide); "false"; "true")+";"
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
