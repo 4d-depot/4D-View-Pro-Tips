@@ -8,7 +8,7 @@ This project gives you examples of how to:
 * Enable the user to see the formula in cells.
 * Create a custom culture
 * Do undo / redo 
-* Manage the visibily of the ribbon
+* Manage the visibility of the ribbon
 * Enable the style copy during a column or row insertion
 * Manage the right click event
 * Get the next cell range or the next empty cell range

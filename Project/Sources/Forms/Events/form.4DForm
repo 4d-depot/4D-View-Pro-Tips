@@ -42,7 +42,7 @@
 					"top": 105,
 					"width": 1171,
 					"height": 489,
-					"userInterface": "none",
+					"userInterface": "ribbon",
 					"withFormulaBar": true,
 					"events": [
 						"onVPReady"

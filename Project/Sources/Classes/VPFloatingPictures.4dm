@@ -11,7 +11,7 @@ Function Names()->$names : Collection
 	$js:="(function (){"
 	$js:=$js+This:C1470.activeSheet
 	$js:=$js+"var names = [];"
-	$js:=$js+"activeSheet.pictures.all().forEach(function (item){names.push(item.name());});"
+	$js:=$js+"activeSheet.pictures.all().forEach(function (item){names.push({name:item.name(),isSelected:item.isSelected()});});"
 	$js:=$js+"return names;})();"
 	
 	$names:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
