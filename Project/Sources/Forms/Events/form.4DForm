@@ -42,7 +42,7 @@
 					"top": 105,
 					"width": 1171,
 					"height": 489,
-					"userInterface": "ribbon",
+					"userInterface": "none",
 					"withFormulaBar": true,
 					"events": [
 						"onVPReady"
@@ -135,59 +135,11 @@
 					],
 					"method": "ObjectMethods/Button6.4dm"
 				},
-				"Button7": {
-					"type": "button",
-					"text": "above",
-					"top": 15,
-					"left": 622,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button7.4dm"
-				},
-				"Button8": {
-					"type": "button",
-					"text": "Below",
-					"top": 36,
-					"left": 622,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button8.4dm"
-				},
-				"Button9": {
-					"type": "button",
-					"text": "left",
-					"top": 59,
-					"left": 622,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button9.4dm"
-				},
-				"Button10": {
-					"type": "button",
-					"text": "right",
-					"top": 81,
-					"left": 622,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button10.4dm"
-				},
 				"Button11": {
 					"type": "button",
 					"text": "above empty",
 					"top": 15,
-					"left": 779,
+					"left": 620,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -199,7 +151,7 @@
 					"type": "button",
 					"text": "Below empty",
 					"top": 36,
-					"left": 779,
+					"left": 620,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -211,7 +163,7 @@
 					"type": "button",
 					"text": "left empty",
 					"top": 59,
-					"left": 779,
+					"left": 620,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -223,7 +175,7 @@
 					"type": "button",
 					"text": "right empty",
 					"top": 81,
-					"left": 779,
+					"left": 620,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -259,7 +211,7 @@
 					"type": "button",
 					"text": "Clear and editing",
 					"top": 15,
-					"left": 948,
+					"left": 789,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -271,7 +223,7 @@
 					"type": "button",
 					"text": "Hide sheet tabs",
 					"top": 36,
-					"left": 948,
+					"left": 789,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -283,23 +235,36 @@
 					"type": "button",
 					"text": "Show sheet tabs",
 					"top": 59,
-					"left": 948,
+					"left": 789,
 					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button19.4dm"
+				},
+				"Button20": {
+					"type": "button",
+					"text": "Pictures names",
+					"top": 15,
+					"left": 953,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button20.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 47,
+	"geometryStamp": 211,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {}
 		}
-	}
+	},
+	"method": "method.4dm"
 }

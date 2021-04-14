@@ -12,5 +12,6 @@ This project gives you examples of how to:
 * Enable the style copy during a column or row insertion
 * Manage the right click event
 * Get the next cell range or the next empty cell range
+* Manage floating pictures
 
 Version min: 4D v18 R6
