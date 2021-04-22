@@ -42,7 +42,7 @@
 					"top": 105,
 					"width": 1171,
 					"height": 489,
-					"userInterface": "ribbon",
+					"userInterface": "none",
 					"withFormulaBar": true,
 					"events": [
 						"onVPReady"
@@ -222,7 +222,7 @@
 				"Button18": {
 					"type": "button",
 					"text": "Hide sheet tabs",
-					"top": 36,
+					"top": 58,
 					"left": 789,
 					"width": 149,
 					"height": 18,
@@ -234,7 +234,7 @@
 				"Button19": {
 					"type": "button",
 					"text": "Show sheet tabs",
-					"top": 59,
+					"top": 81,
 					"left": 789,
 					"width": 149,
 					"height": 18,
@@ -254,11 +254,35 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button20.4dm"
+				},
+				"Button7": {
+					"type": "button",
+					"text": "Editing",
+					"top": 36,
+					"left": 789,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button7.4dm"
+				},
+				"Button8": {
+					"type": "button",
+					"text": "modified  cells list",
+					"top": 36,
+					"left": 953,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button8.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 211,
+	"geometryStamp": 216,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

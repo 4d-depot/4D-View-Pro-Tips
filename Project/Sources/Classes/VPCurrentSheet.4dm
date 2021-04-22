@@ -75,11 +75,32 @@ Function clearAndEditing($fromRange : Object)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+Function EditActiveCell($selectAll : Boolean)
+	var $js; $answer : Text
+	
+	$js:="Utils.spread.getActiveSheet().startEdit("+Choose:C955(Bool:C1537($selectAll); "true"; "false")+");"
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
 	// Enables the user to see the formula in a cell.
 Function showFormula($show : Boolean)
 	var $answer : Text
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; "ViewProArea"; "Utils.spread.getActiveSheet().options.showFormulas = "+Choose:C955(Bool:C1537($show); "true"; "false")+";")
 	
+	// returns all the cells modified from the last dirty bit reset
+Function modifiedCells($reset : Boolean)->$cells : Collection
+	var $js; $answer : Text
+	
+	$js:="(function (){"
+	$js:=$js+"return Utils.spread.getActiveSheet().getDirtyCells();"
+	$js:=$js+"})();"
+	
+	$cells:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
+	
+	// reset dirty bit if asked
+	If (Bool:C1537($reset))
+		$js:="Utils.spread.getActiveSheet().clearPendingChanges();"
+		$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	End if 
 	
 	

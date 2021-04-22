@@ -13,5 +13,6 @@ This project gives you examples of how to:
 * Manage the right click event
 * Get the next cell range or the next empty cell range
 * Manage floating pictures
+* List all the modified cells
 
 Version min: 4D v18 R6
