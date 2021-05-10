@@ -42,7 +42,7 @@
 					"top": 105,
 					"width": 1171,
 					"height": 489,
-					"userInterface": "none",
+					"userInterface": "ribbon",
 					"withFormulaBar": true,
 					"events": [
 						"onVPReady"
@@ -278,11 +278,23 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button8.4dm"
+				},
+				"Button9": {
+					"type": "button",
+					"text": "add button",
+					"top": 59,
+					"left": 953,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button9.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 216,
+	"geometryStamp": 218,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -14,5 +14,6 @@ This project gives you examples of how to:
 * Get the next cell range or the next empty cell range
 * Manage floating pictures
 * List all the modified cells
+* Add buttons
 
 Version min: 4D v18 R6
