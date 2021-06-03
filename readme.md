@@ -15,5 +15,6 @@ This project gives you examples of how to:
 * Manage floating pictures
 * List all the modified cells
 * Add buttons
+* Group rows or cells
 
 Version min: 4D v18 R6

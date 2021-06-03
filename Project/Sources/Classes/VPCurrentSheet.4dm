@@ -103,4 +103,42 @@ Function modifiedCells($reset : Boolean)->$cells : Collection
 		$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	End if 
 	
+Function getLastNonEmptyRow()->$lastRow : Integer
+	var $js; $answer : Text
+	
+	$js:="(function (){"
+	$js:=$js+"    try{"
+	$js:=$js+"    let sheet = Utils.currentSheet;"
+	$js:=$js+"    let rows = Object.keys(sheet.toJSON().data.dataTable);"
+	$js:=$js+"  return rows[rows.length - 1];"
+	$js:=$js+"    }"
+	$js:=$js+"    catch(error){"
+	$js:=$js+"        return 0;"
+	$js:=$js+"    }"
+	$js:=$js+"})();"
+	$lastRow:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is integer:K8:5)
+	
+Function getLastNonEmptyCol()->$lastCol : Integer
+	var $js; $answer : Text
+	
+	$js:="(function (){"
+	$js:=$js+"    try{"
+	$js:=$js+"    let sheet = Utils.currentSheet;"
+	$js:=$js+"    let json = sheet.toJSON();"
+	$js:=$js+"    let dataTable = Object.keys(json.data.dataTable);"
+	$js:=$js+"    let nonEmptyColIndex = -1;"
+	$js:=$js+"    dataTable.forEach((row) => {"
+	$js:=$js+"      let rowArray = Object.keys(json.data.dataTable[row]);"
+	$js:=$js+"      rowArray.forEach((col) => {"
+	$js:=$js+"        nonEmptyColIndex = Math.max(nonEmptyColIndex, col);"
+	$js:=$js+"      });"
+	$js:=$js+"    });"
+	$js:=$js+"    return nonEmptyColIndex;"
+	$js:=$js+"}"
+	$js:=$js+"catch(error){"
+	$js:=$js+"    return 0;"
+	$js:=$js+"}"
+	$js:=$js+"})();"
+	$lastCol:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is integer:K8:5)
+	
 	

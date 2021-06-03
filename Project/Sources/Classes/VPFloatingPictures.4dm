@@ -5,6 +5,7 @@ Class constructor($areaName : Text)
 	
 	
 	// Gets the list of all the floating picture of the active sheet
+	// To know which picture is selected, the objects returns contains the isSelected attribut 
 Function Names()->$names : Collection
 	var $js : Text
 	

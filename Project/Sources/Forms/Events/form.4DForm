@@ -55,7 +55,7 @@
 					"type": "button",
 					"text": "Debug",
 					"top": 46,
-					"left": 75,
+					"left": 43,
 					"width": 132,
 					"height": 31,
 					"events": [
@@ -67,7 +67,7 @@
 					"type": "button",
 					"text": "Cell selection",
 					"top": 15,
-					"left": 254,
+					"left": 189,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -79,7 +79,7 @@
 					"type": "button",
 					"text": "Row selection",
 					"top": 36,
-					"left": 254,
+					"left": 189,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -91,7 +91,7 @@
 					"type": "button",
 					"text": "Column selection",
 					"top": 59,
-					"left": 254,
+					"left": 189,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -103,7 +103,7 @@
 					"type": "button",
 					"text": "Copy past",
 					"top": 15,
-					"left": 445,
+					"left": 380,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -115,7 +115,7 @@
 					"type": "button",
 					"text": "hide ribbon",
 					"top": 36,
-					"left": 445,
+					"left": 380,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -127,7 +127,7 @@
 					"type": "button",
 					"text": "Show ribbon",
 					"top": 59,
-					"left": 445,
+					"left": 380,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -139,7 +139,7 @@
 					"type": "button",
 					"text": "above empty",
 					"top": 15,
-					"left": 620,
+					"left": 555,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -151,7 +151,7 @@
 					"type": "button",
 					"text": "Below empty",
 					"top": 36,
-					"left": 620,
+					"left": 555,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -163,7 +163,7 @@
 					"type": "button",
 					"text": "left empty",
 					"top": 59,
-					"left": 620,
+					"left": 555,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -175,7 +175,7 @@
 					"type": "button",
 					"text": "right empty",
 					"top": 81,
-					"left": 620,
+					"left": 555,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -187,7 +187,7 @@
 					"type": "button",
 					"text": "Undo",
 					"top": 81,
-					"left": 254,
+					"left": 189,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -199,7 +199,7 @@
 					"type": "button",
 					"text": "Redo",
 					"top": 81,
-					"left": 445,
+					"left": 380,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -211,7 +211,7 @@
 					"type": "button",
 					"text": "Clear and editing",
 					"top": 15,
-					"left": 789,
+					"left": 724,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -223,7 +223,7 @@
 					"type": "button",
 					"text": "Hide sheet tabs",
 					"top": 58,
-					"left": 789,
+					"left": 724,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -235,7 +235,7 @@
 					"type": "button",
 					"text": "Show sheet tabs",
 					"top": 81,
-					"left": 789,
+					"left": 724,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -247,7 +247,7 @@
 					"type": "button",
 					"text": "Pictures names",
 					"top": 15,
-					"left": 953,
+					"left": 888,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -259,7 +259,7 @@
 					"type": "button",
 					"text": "Editing",
 					"top": 36,
-					"left": 789,
+					"left": 724,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -271,7 +271,7 @@
 					"type": "button",
 					"text": "modified  cells list",
 					"top": 36,
-					"left": 953,
+					"left": 888,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -282,19 +282,79 @@
 				"Button9": {
 					"type": "button",
 					"text": "add button",
-					"top": 59,
-					"left": 953,
+					"top": 81,
+					"left": 888,
 					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button9.4dm"
+				},
+				"Button10": {
+					"type": "button",
+					"text": "select last cell",
+					"top": 58,
+					"left": 888,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button10.4dm"
+				},
+				"Button21": {
+					"type": "button",
+					"text": "group cells",
+					"top": 15,
+					"left": 1043,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button21.4dm"
+				},
+				"Button22": {
+					"type": "button",
+					"text": "collapse group",
+					"top": 36,
+					"left": 1043,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button22.4dm"
+				},
+				"Button23": {
+					"type": "button",
+					"text": "expand group",
+					"top": 58,
+					"left": 1043,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button23.4dm"
+				},
+				"Button24": {
+					"type": "button",
+					"text": "ungroup cells",
+					"top": 81,
+					"left": 1043,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button24.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 218,
+	"geometryStamp": 296,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
