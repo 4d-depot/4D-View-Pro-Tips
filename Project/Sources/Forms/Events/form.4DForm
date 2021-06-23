@@ -54,10 +54,10 @@
 				"Button": {
 					"type": "button",
 					"text": "Debug",
-					"top": 46,
+					"top": 15,
 					"left": 43,
-					"width": 132,
-					"height": 31,
+					"width": 144,
+					"height": 18,
 					"events": [
 						"onClick"
 					],
@@ -350,11 +350,23 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button24.4dm"
+				},
+				"Button25": {
+					"type": "button",
+					"text": "Hide add sheet button",
+					"top": 36,
+					"left": 43,
+					"width": 144,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button25.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 296,
+	"geometryStamp": 303,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

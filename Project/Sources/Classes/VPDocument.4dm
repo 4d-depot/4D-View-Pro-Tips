@@ -64,3 +64,9 @@ Function hideSheetTabs($hide : Boolean)
 	$js:="Utils.spread.options.tabStripVisible  = "+Choose:C955(Bool:C1537($hide); "false"; "true")+";"
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+Function hideSheetNewTabButton($hide : Boolean)
+	var $js; $anwer : Text
+	
+	$js:="Utils.spread.options.newTabVisible  = "+Choose:C955(Bool:C1537($hide); "false"; "true")+";"
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
