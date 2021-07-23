@@ -15,8 +15,10 @@ Function areaName()->$name : Text
 	
 	// Set or get the current range number
 Function rangeNumber($number : Integer)->$rangeNumber : Integer
-	If ($number<This:C1470.length())
-		This:C1470._rangeNumber:=$number
+	If (Count parameters:C259>0)
+		If ($number<This:C1470.length())
+			This:C1470._rangeNumber:=$number
+		End if 
 	End if 
 	$rangeNumber:=This:C1470._rangeNumber
 	
@@ -49,7 +51,7 @@ Function rowCount()->$rowc : Integer
 		If (This:C1470.range.ranges[This:C1470._rangeNumber].rowCount#Null:C1517)
 			$rowc:=Num:C11(This:C1470.range.ranges[This:C1470._rangeNumber].rowCount)
 		Else 
-			$rowc:=-1
+			$rowc:=1
 		End if 
 	End if 
 	
@@ -73,7 +75,7 @@ Function columnCount()->$columnc : Integer
 		If (This:C1470.range.ranges[This:C1470._rangeNumber].columnCount#Null:C1517)
 			$columnc:=Num:C11(This:C1470.range.ranges[This:C1470._rangeNumber].columnCount)
 		Else 
-			$columnc:=-1
+			$columnc:=1
 		End if 
 	End if 
 	
@@ -121,3 +123,14 @@ Function currentRange()->$range : Object
 Function _splitRange($pos : Integer)->$newRange : Object
 	$newRange:=New object:C1471("area"; This:C1470.range.area; "ranges"; New collection:C1472())
 	$newRange.ranges.push(This:C1470.range.ranges[$pos])
+	
+	// Convert the range in letter as "$A$1:$C$10"
+Function toLetter()->$formula : Text
+	var $js : Text
+	
+	$js:="(function (){"
+	$js:=$js+"var range=[new GC.Spread.Sheets.CellRange("+String:C10(This:C1470.sheet())+","+String:C10(This:C1470.row())+","+String:C10(This:C1470.column())+","+String:C10(This:C1470.rowCount())+","+String:C10(This:C1470.columnCount())+")];"
+	$js:=$js+"return GC.Spread.Sheets.CalcEngine.rangesToFormula(range);"
+	$js:=$js+"})();"
+	$formula:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName(); $js; Is text:K8:3)
+	

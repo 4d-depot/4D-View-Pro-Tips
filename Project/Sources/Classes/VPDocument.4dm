@@ -38,11 +38,13 @@ Function customCulture()
 	// Undoes the last command.
 Function undo()
 	var $answer : Text
+	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; "Utils.spread.undoManager().undo()")
 	
 	// Redoes the last command.
 Function redo()
 	var $answer : Text
+	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; "Utils.spread.undoManager().redo()")
 	
 	// Changes the visibily of the ribbon
@@ -58,14 +60,16 @@ Function hideRibbon($hide : Boolean)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+	// Hides / shows the shet tab in your document
 Function hideSheetTabs($hide : Boolean)
-	var $js; $anwer : Text
+	var $js; $answer : Text
 	
 	$js:="Utils.spread.options.tabStripVisible  = "+Choose:C955(Bool:C1537($hide); "false"; "true")+";"
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
-Function hideSheetNewTabButton($hide : Boolean)
-	var $js; $anwer : Text
+	// Hides / shows the button to add new tab to your document
+Function hideNewSheetButton($hide : Boolean)
+	var $js; $answer : Text
 	
 	$js:="Utils.spread.options.newTabVisible  = "+Choose:C955(Bool:C1537($hide); "false"; "true")+";"
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)

@@ -32,16 +32,27 @@
 	"destination": "detailScreen",
 	"pages": [
 		{
-			"objects": {}
-		},
-		{
 			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 41,
+					"left": 28,
+					"width": 1191,
+					"height": 560,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": []
+				},
 				"ViewProArea": {
 					"type": "view",
 					"left": 43,
-					"top": 105,
-					"width": 1171,
-					"height": 489,
+					"top": 135,
+					"width": 1166,
+					"height": 459,
 					"userInterface": "ribbon",
 					"withFormulaBar": true,
 					"events": [
@@ -49,169 +60,30 @@
 					],
 					"method": "ObjectMethods/ViewProArea.4dm",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"dataSource": ""
 				},
 				"Button": {
 					"type": "button",
-					"text": "Debug",
-					"top": 15,
-					"left": 43,
+					"text": "Open inspector",
+					"top": 12,
+					"left": 28,
 					"width": 144,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button.4dm"
-				},
-				"Button1": {
-					"type": "button",
-					"text": "Cell selection",
-					"top": 15,
-					"left": 189,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button1.4dm"
-				},
-				"Button2": {
-					"type": "button",
-					"text": "Row selection",
-					"top": 36,
-					"left": 189,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button2.4dm"
-				},
-				"Button3": {
-					"type": "button",
-					"text": "Column selection",
-					"top": 59,
-					"left": 189,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button3.4dm"
-				},
-				"Button4": {
-					"type": "button",
-					"text": "Copy past",
-					"top": 15,
-					"left": 380,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button4.4dm"
-				},
-				"Button5": {
-					"type": "button",
-					"text": "hide ribbon",
-					"top": 36,
-					"left": 380,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button5.4dm"
-				},
-				"Button6": {
-					"type": "button",
-					"text": "Show ribbon",
-					"top": 59,
-					"left": 380,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button6.4dm"
-				},
-				"Button11": {
-					"type": "button",
-					"text": "above empty",
-					"top": 15,
-					"left": 555,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button11.4dm"
-				},
-				"Button12": {
-					"type": "button",
-					"text": "Below empty",
-					"top": 36,
-					"left": 555,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button12.4dm"
-				},
-				"Button13": {
-					"type": "button",
-					"text": "left empty",
-					"top": 59,
-					"left": 555,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button13.4dm"
-				},
-				"Button14": {
-					"type": "button",
-					"text": "right empty",
-					"top": 81,
-					"left": 555,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button14.4dm"
-				},
-				"Button15": {
-					"type": "button",
-					"text": "Undo",
-					"top": 81,
-					"left": 189,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button15.4dm"
-				},
-				"Button16": {
-					"type": "button",
-					"text": "Redo",
-					"top": 81,
-					"left": 380,
-					"width": 142,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button16.4dm"
-				},
+				}
+			}
+		},
+		{
+			"objects": {
 				"Button17": {
 					"type": "button",
 					"text": "Clear and editing",
-					"top": 15,
-					"left": 724,
+					"top": 80,
+					"left": 265,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -219,47 +91,11 @@
 					],
 					"method": "ObjectMethods/Button17.4dm"
 				},
-				"Button18": {
-					"type": "button",
-					"text": "Hide sheet tabs",
-					"top": 58,
-					"left": 724,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button18.4dm"
-				},
-				"Button19": {
-					"type": "button",
-					"text": "Show sheet tabs",
-					"top": 81,
-					"left": 724,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button19.4dm"
-				},
-				"Button20": {
-					"type": "button",
-					"text": "Pictures names",
-					"top": 15,
-					"left": 888,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button20.4dm"
-				},
 				"Button7": {
 					"type": "button",
 					"text": "Editing",
-					"top": 36,
-					"left": 724,
+					"top": 101,
+					"left": 265,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -270,8 +106,8 @@
 				"Button8": {
 					"type": "button",
 					"text": "modified  cells list",
-					"top": 36,
-					"left": 888,
+					"top": 79,
+					"left": 439,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -279,84 +115,36 @@
 					],
 					"method": "ObjectMethods/Button8.4dm"
 				},
-				"Button9": {
+				"Button26": {
 					"type": "button",
-					"text": "add button",
-					"top": 81,
-					"left": 888,
+					"text": "Show formulas",
+					"top": 79,
+					"left": 608,
 					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button9.4dm"
+					"method": "ObjectMethods/Button26.4dm"
 				},
-				"Button10": {
+				"Button27": {
 					"type": "button",
-					"text": "select last cell",
-					"top": 58,
-					"left": 888,
+					"text": "Hide formulas",
+					"top": 101,
+					"left": 608,
 					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button10.4dm"
-				},
-				"Button21": {
-					"type": "button",
-					"text": "group cells",
-					"top": 15,
-					"left": 1043,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button21.4dm"
-				},
-				"Button22": {
-					"type": "button",
-					"text": "collapse group",
-					"top": 36,
-					"left": 1043,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button22.4dm"
-				},
-				"Button23": {
-					"type": "button",
-					"text": "expand group",
-					"top": 58,
-					"left": 1043,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button23.4dm"
-				},
-				"Button24": {
-					"type": "button",
-					"text": "ungroup cells",
-					"top": 81,
-					"left": 1043,
-					"width": 149,
-					"height": 18,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button24.4dm"
+					"method": "ObjectMethods/Button27.4dm"
 				},
 				"Button25": {
 					"type": "button",
-					"text": "Hide add sheet button",
-					"top": 36,
+					"text": "Add button",
+					"top": 88,
 					"left": 43,
-					"width": 144,
+					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
@@ -364,9 +152,269 @@
 					"method": "ObjectMethods/Button25.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button1": {
+					"type": "button",
+					"text": "Cell selection",
+					"top": 67,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Row selection",
+					"top": 88,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Column selection",
+					"top": 110,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm"
+				},
+				"Button4": {
+					"type": "button",
+					"text": "Copy past value in A1",
+					"top": 88,
+					"left": 228,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button4.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button5": {
+					"type": "button",
+					"text": "Hide ribbon",
+					"top": 78,
+					"left": 293,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button5.4dm"
+				},
+				"Button6": {
+					"type": "button",
+					"text": "Show ribbon",
+					"top": 101,
+					"left": 293,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button6.4dm"
+				},
+				"Button15": {
+					"type": "button",
+					"text": "Undo",
+					"top": 78,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button15.4dm"
+				},
+				"Button16": {
+					"type": "button",
+					"text": "Redo",
+					"top": 101,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button16.4dm"
+				},
+				"Button18": {
+					"type": "button",
+					"text": "Hide sheet tabs",
+					"top": 78,
+					"left": 544,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button18.4dm"
+				},
+				"Button19": {
+					"type": "button",
+					"text": "Show sheet tabs",
+					"top": 101,
+					"left": 544,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button19.4dm"
+				},
+				"Button28": {
+					"type": "button",
+					"text": "Hide add sheet button",
+					"top": 78,
+					"left": 802,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button28.4dm"
+				},
+				"Button29": {
+					"type": "button",
+					"text": "Show add sheet button",
+					"top": 101,
+					"left": 802,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button29.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button20": {
+					"type": "button",
+					"text": "Add pictures",
+					"top": 88,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button20.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button11": {
+					"type": "button",
+					"text": "Above empty",
+					"top": 78,
+					"left": 293,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button11.4dm"
+				},
+				"Button12": {
+					"type": "button",
+					"text": "Below empty",
+					"top": 101,
+					"left": 293,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button12.4dm"
+				},
+				"Button13": {
+					"type": "button",
+					"text": "Left empty",
+					"top": 78,
+					"left": 544,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button13.4dm"
+				},
+				"Button14": {
+					"type": "button",
+					"text": "Right empty",
+					"top": 101,
+					"left": 544,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button14.4dm"
+				},
+				"Button10": {
+					"type": "button",
+					"text": "Select last cell",
+					"top": 88,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button10.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button21": {
+					"type": "button",
+					"text": "Group cells",
+					"top": 78,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button21.4dm"
+				},
+				"Button24": {
+					"type": "button",
+					"text": "Ungroup cells",
+					"top": 101,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button24.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 303,
+	"geometryStamp": 776,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -1,3 +1,3 @@
 
-cs:C1710.VPCurrentSheet.new("ViewProArea").clearAndEditing(VP Get selection("ViewProArea"))
+cs:C1710.VPCellManagement.new("ViewProArea").clearAndEditing(VP Get selection("ViewProArea"))
 

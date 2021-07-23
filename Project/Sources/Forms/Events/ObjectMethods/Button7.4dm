@@ -1,3 +1,3 @@
 
-cs:C1710.VPCurrentSheet.new("ViewProArea").EditActiveCell(True:C214)
+cs:C1710.VPCellManagement.new("ViewProArea").editActiveCell(True:C214)
 
