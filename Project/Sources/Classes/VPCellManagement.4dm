@@ -75,7 +75,8 @@ Function modifiedCells($reset : Boolean)->$cells : Collection
 	
 	// reset dirty bit if asked
 	If (Bool:C1537($reset))
-		$js:="activeSheet.clearPendingChanges();"
+		$js:=This:C1470.activeSheet
+		$js:=$js+"activeSheet.clearPendingChanges();"
 		$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	End if 
 	
