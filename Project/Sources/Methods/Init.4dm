@@ -7,4 +7,5 @@ APPEND TO ARRAY:C911(_TabTitles; "VPDocument")
 APPEND TO ARRAY:C911(_TabTitles; "VPFloatingPictures")
 APPEND TO ARRAY:C911(_TabTitles; "VPNavigation")
 APPEND TO ARRAY:C911(_TabTitles; "VPRangeGrouping")
+APPEND TO ARRAY:C911(_TabTitles; "VPSort")
 

@@ -412,9 +412,25 @@
 					"method": "ObjectMethods/Button24.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button9": {
+					"type": "button",
+					"text": "Sort range",
+					"top": 78,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button9.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 778,
+	"geometryStamp": 780,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
