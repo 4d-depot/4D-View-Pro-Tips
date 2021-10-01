@@ -16,5 +16,6 @@ This project gives you examples of how to:
 * List all the modified cells
 * Add buttons
 * Group rows or cells
+* Sort columns or rows
 
 Version min: 4D v18 R6

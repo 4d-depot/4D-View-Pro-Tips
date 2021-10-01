@@ -18,11 +18,11 @@ Function Names()->$names : Collection
 	$names:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
 	
 	// Add a new picture in the current sheet
-Function Add($name : Text; $posixPath : Text; $x : Integer; $y : Integer; $width : Integer; $height : Integer)
+Function Add($name : Text; $path : Text; $x : Integer; $y : Integer; $width : Integer; $height : Integer)
 	var $js; $answer : Text
 	
 	$js:=This:C1470.activeSheet
-	$js:=$js+"activeSheet.pictures.add('"+$name+"','"+$posixPath+"',"+String:C10($x)+","+String:C10($y)+","+String:C10($width)+","+String:C10($height)+");"
+	$js:=$js+"activeSheet.pictures.add('"+$name+"','"+This:C1470._makePicture($path)+"',"+String:C10($x)+","+String:C10($y)+","+String:C10($width)+","+String:C10($height)+");"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
@@ -126,5 +126,51 @@ Function BorderWidth($name : Text; $width : Integer)
 	$js:=$js+"pict.borderWidth("+String:C10($width)+");"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
+	// Generates a picture encoded in base 64
+Function _makePicture($path : Text)->$uri : Text
+	C_PICTURE:C286($pict)
+	
+	ok:=0
+	
+	READ PICTURE FILE:C678($path; $pict)
+	
+	If (ok=1)
+		ARRAY TEXT:C222($codecs; 0)
+		ARRAY TEXT:C222($prefered_codecs_order; 0)
+		APPEND TO ARRAY:C911($prefered_codecs_order; ".png")
+		APPEND TO ARRAY:C911($prefered_codecs_order; ".jpg")
+		APPEND TO ARRAY:C911($prefered_codecs_order; ".gif")
+		
+		GET PICTURE FORMATS:C1406($pict; $codecs)
+		
+		C_TEXT:C284($codec)
+		C_LONGINT:C283($wanted_codec; $Lon_i)
+		$Lon_i:=1
+		
+		While (($Lon_i<=Size of array:C274($prefered_codecs_order)) & ($codec=""))
+			$wanted_codec:=Find in array:C230($codecs; $prefered_codecs_order{$Lon_i})
+			If ($wanted_codec#-1)
+				$codec:=$prefered_codecs_order{$Lon_i}
+			End if 
+			$Lon_i:=$Lon_i+1
+		End while 
+		
+		If ($codec="")
+			$codec:=".png"
+		End if 
+		
+		C_BLOB:C604($Blb_buffer)
+		C_TEXT:C284($Txt_image)
+		
+		PICTURE TO BLOB:C692($pict; $Blb_buffer; $codec)
+		BASE64 ENCODE:C895($Blb_buffer; $Txt_image)
+		CLEAR VARIABLE:C89($Blb_buffer)
+		
+		$uri:="data:image/"+Delete string:C232($codec; 1; 1)+";base64,"+$Txt_image
+		
+		
+	End if 
+	
 	
 	

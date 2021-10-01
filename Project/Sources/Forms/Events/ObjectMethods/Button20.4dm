@@ -3,7 +3,7 @@ var $p : cs:C1710.VPFloatingPictures
 
 $p:=cs:C1710.VPFloatingPictures.new("ViewProArea")
 
-$p.Add("4DLogo"; Convert path system to POSIX:C1106(Folder:C1567(fk resources folder:K87:11).file("4d.png").platformPath); 20; 20; 50; 50)
+$p.Add("4DLogo"; Folder:C1567(fk resources folder:K87:11).file("4d.png").platformPath; 20; 20; 50; 50)
 
 //$names:=$p.Names()
 
