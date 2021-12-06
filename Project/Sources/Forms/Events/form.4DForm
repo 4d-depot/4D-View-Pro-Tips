@@ -428,9 +428,26 @@
 					"method": "ObjectMethods/Button9.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button22": {
+					"type": "button",
+					"top": 80,
+					"left": 57,
+					"width": 166,
+					"height": 28,
+					"text": "Append a file",
+					"focusable": false,
+					"method": "ObjectMethods/Button22.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
 		}
 	],
-	"geometryStamp": 780,
+	"geometryStamp": 787,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

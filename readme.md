@@ -17,5 +17,6 @@ This project gives you examples of how to:
 * Add buttons
 * Group rows or cells
 * Sort columns or rows
+* Concatenate documents
 
 Version min: 4D v18 R6
