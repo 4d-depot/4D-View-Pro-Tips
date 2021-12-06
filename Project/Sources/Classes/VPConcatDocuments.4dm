@@ -32,7 +32,7 @@ Function _sheetsCount($currentDoc : Object)->$count : Integer
 	
 Function _documentToObject($path : Text)->$result : Object
 	
-	$result:=JSON Parse:C1218(Document to text:C1236($path))
+	$result:=JSON Parse:C1218(Document to text:C1236($path; "UTF-8"))
 	
 	
 Function _copySheets($currentDoc : Object)
