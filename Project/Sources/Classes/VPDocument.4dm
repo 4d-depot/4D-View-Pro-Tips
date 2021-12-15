@@ -35,6 +35,14 @@ Function customCulture()
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+	// Clear the undo list. 
+	// All the modifications done until the call of clearUndoList will be lost.
+Function clearUndoList()
+	var $answer : Text
+	
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; "Utils.spread.undoManager().clear()")
+	
+	
 	// Undoes the last command.
 Function undo()
 	var $answer : Text

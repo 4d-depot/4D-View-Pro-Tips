@@ -234,7 +234,7 @@
 				"Button15": {
 					"type": "button",
 					"text": "Undo",
-					"top": 78,
+					"top": 67,
 					"left": 43,
 					"width": 142,
 					"height": 18,
@@ -246,7 +246,7 @@
 				"Button16": {
 					"type": "button",
 					"text": "Redo",
-					"top": 101,
+					"top": 88,
 					"left": 43,
 					"width": 142,
 					"height": 18,
@@ -302,6 +302,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button29.4dm"
+				},
+				"Button23": {
+					"type": "button",
+					"text": "Clear undo list",
+					"top": 110,
+					"left": 43,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button23.4dm"
 				}
 			}
 		},
@@ -447,7 +459,7 @@
 			}
 		}
 	],
-	"geometryStamp": 787,
+	"geometryStamp": 801,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
