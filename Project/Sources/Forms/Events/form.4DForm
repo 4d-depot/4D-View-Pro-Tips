@@ -401,7 +401,7 @@
 			"objects": {
 				"Button21": {
 					"type": "button",
-					"text": "Group cells",
+					"text": "Group rows",
 					"top": 78,
 					"left": 43,
 					"width": 149,
@@ -414,14 +414,50 @@
 				"Button24": {
 					"type": "button",
 					"text": "Ungroup cells",
-					"top": 101,
-					"left": 43,
+					"top": 97,
+					"left": 466,
 					"width": 149,
 					"height": 18,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button24.4dm"
+				},
+				"Button30": {
+					"type": "button",
+					"text": "collapse rows",
+					"top": 107,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button30.4dm"
+				},
+				"Button31": {
+					"type": "button",
+					"text": "Group columns",
+					"top": 78,
+					"left": 212,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button31.4dm"
+				},
+				"Button32": {
+					"type": "button",
+					"text": "Collapse columns",
+					"top": 107,
+					"left": 212,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button32.4dm"
 				}
 			}
 		},
@@ -459,7 +495,7 @@
 			}
 		}
 	],
-	"geometryStamp": 801,
+	"geometryStamp": 810,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
