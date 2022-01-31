@@ -4,7 +4,7 @@ var $p : cs:C1710.VPFloatingPictures
 $p:=cs:C1710.VPFloatingPictures.new("ViewProArea")
 
 $p.Add("4DLogo"; Folder:C1567(fk resources folder:K87:11).file("4d.png").platformPath; 20; 20; 50; 50)
-$p.move("4DLogo"; VP Get selection("ViewProArea"))
+$p.Move("4DLogo"; VP Get selection("ViewProArea"))
 
 //$names:=$p.Names()
 

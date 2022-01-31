@@ -27,7 +27,7 @@ Function Add($name : Text; $path : Text; $x : Integer; $y : Integer; $width : In
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
 	// Move the picture to the range 
-Function move($name : Text; $range : Object)
+Function Move($name : Text; $range : Object)
 	var $js; $answer : Text
 	var $rangeTmp : cs:C1710.VPRangeReader
 	
