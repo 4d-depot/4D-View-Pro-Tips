@@ -26,6 +26,27 @@ Function Add($name : Text; $path : Text; $x : Integer; $y : Integer; $width : In
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+	// Move the picture to the range 
+Function move($name : Text; $range : Object)
+	var $js; $answer : Text
+	var $rangeTmp : cs:C1710.VPRangeReader
+	
+	$rangeTmp:=cs:C1710.VPRangeReader.new($range)
+	
+	$js:=This:C1470.activeSheet
+	$js:=$js+"pict=activeSheet.pictures.get('"+$name+"');"
+	$js:=$js+"pict.startColumnOffset (0); "
+	$js:=$js+"pict.startRowOffset (0); "
+	$js:=$js+"pict.endColumnOffset (0); "
+	$js:=$js+"pict.endRowOffset (0); "
+	$js:=$js+"pict.startRow("+String:C10($rangeTmp.row())+"); "
+	$js:=$js+"pict.endRow("+String:C10($rangeTmp.row()+$rangeTmp.rowCount())+");"
+	$js:=$js+"pict.startColumn("+String:C10($rangeTmp.column())+");"
+	$js:=$js+"pict.endColumn( "+String:C10($rangeTmp.column()+$rangeTmp.columnCount())+");"
+	
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
+	
 	// Removes a floating picture from the active sheet by the indicate name. 
 Function Remove($name : Text)
 	var $js; $answer : Text
@@ -46,7 +67,7 @@ Function Stretch($name : Text; $strectType : Integer)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
-	//Sets the width of the picture from the active sheet by the indicate name.
+	//Sets the width in pixel of the picture from the active sheet by the indicate name.
 Function Width($name : Text; $width : Integer)
 	var $js; $answer : Text
 	
@@ -56,7 +77,7 @@ Function Width($name : Text; $width : Integer)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
-	//Sets the height of the picture from the active sheet by the indicate name.
+	//Sets the height in pixel of the picture from the active sheet by the indicate name.
 Function Height($name : Text; $height : Integer)
 	var $js; $answer : Text
 	
