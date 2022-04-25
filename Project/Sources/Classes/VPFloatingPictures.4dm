@@ -46,6 +46,19 @@ Function Move($name : Text; $range : Object)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+	// Returns the uri contains in the src of the picture
+Function getURI($name : Text) : Text
+	var $js; $uri : Text
+	
+	$js:="(function (){"
+	//$js+=This.activeSheet
+	$js:=$js+"pict=activeSheet.pictures.get('"+$name+"');"
+	$js:=$js+"return pict.src();"
+	$js:=$js+"})();"
+	
+	$uri:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is text:K8:3)
+	
+	$0:=$uri
 	
 	// Removes a floating picture from the active sheet by the indicate name. 
 Function Remove($name : Text)

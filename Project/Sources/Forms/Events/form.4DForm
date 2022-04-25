@@ -150,6 +150,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button25.4dm"
+				},
+				"Button36": {
+					"type": "button",
+					"text": "Validate value",
+					"top": 80,
+					"left": 789,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button36.4dm"
 				}
 			}
 		},
@@ -330,6 +342,30 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button20.4dm"
+				},
+				"Button33": {
+					"type": "button",
+					"text": "Get Uri",
+					"top": 88,
+					"left": 515,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button33.4dm"
+				},
+				"Button35": {
+					"type": "button",
+					"text": "Move to selection",
+					"top": 88,
+					"left": 250,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button35.4dm"
 				}
 			}
 		},
@@ -493,9 +529,209 @@
 					]
 				}
 			}
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 371,
+					"top": 86,
+					"width": 161,
+					"height": 16,
+					"events": [
+						"onBeginDragOver"
+					],
+					"method": "ObjectMethods/Input.4dm",
+					"dataSource": "Form:C1466.dragField",
+					"dragging": "custom",
+					"dropping": "none",
+					"contextMenu": "none"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Drag this field to the VP area:",
+					"top": 87,
+					"left": 155,
+					"width": 204,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Button34": {
+					"type": "button",
+					"text": "Activate Right click",
+					"top": 83,
+					"left": 663,
+					"width": 165,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button34.4dm"
+				},
+				"Button48": {
+					"type": "button",
+					"text": "Activate Column Changed",
+					"top": 72,
+					"left": 1016,
+					"width": 165,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button48.4dm"
+				},
+				"Button49": {
+					"type": "button",
+					"text": "Activate Row Changed",
+					"top": 96,
+					"left": 1016,
+					"width": 165,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button49.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button37": {
+					"type": "button",
+					"text": "hover columns",
+					"top": 78,
+					"left": 56,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button37.4dm"
+				},
+				"Button38": {
+					"type": "button",
+					"text": "hover rows",
+					"top": 103,
+					"left": 56,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button38.4dm"
+				},
+				"Button39": {
+					"type": "button",
+					"text": "Reset rules",
+					"top": 78,
+					"left": 1093,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button39.4dm"
+				},
+				"Button40": {
+					"type": "button",
+					"text": "selected columns",
+					"top": 78,
+					"left": 208,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button40.4dm"
+				},
+				"Button41": {
+					"type": "button",
+					"text": "selected rows",
+					"top": 103,
+					"left": 208,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button41.4dm"
+				},
+				"Button42": {
+					"type": "button",
+					"text": "active columns",
+					"top": 78,
+					"left": 362,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button42.4dm"
+				},
+				"Button43": {
+					"type": "button",
+					"text": "active rows",
+					"top": 103,
+					"left": 362,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button43.4dm"
+				},
+				"Button44": {
+					"type": "button",
+					"text": "edit columns",
+					"top": 78,
+					"left": 534,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button44.4dm"
+				},
+				"Button45": {
+					"type": "button",
+					"text": "edit rows",
+					"top": 103,
+					"left": 534,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button45.4dm"
+				},
+				"Button46": {
+					"type": "button",
+					"text": "dirty columns",
+					"top": 78,
+					"left": 670,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button46.4dm"
+				},
+				"Button47": {
+					"type": "button",
+					"text": "dirty rows",
+					"top": 103,
+					"left": 670,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button47.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 810,
+	"geometryStamp": 850,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

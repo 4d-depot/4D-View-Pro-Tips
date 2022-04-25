@@ -1,4 +1,5 @@
 //%attributes = {}
 #DECLARE($args : Object)
 
-TRACE:C157
+ALERT:C41("Column:"+String:C10($args.col)+" - Row:"+String:C10($args.row))
+//TRACE

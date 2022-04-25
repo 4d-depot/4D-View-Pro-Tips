@@ -9,3 +9,8 @@ APPEND TO ARRAY:C911(_TabTitles; "VPNavigation")
 APPEND TO ARRAY:C911(_TabTitles; "VPRangeGrouping")
 APPEND TO ARRAY:C911(_TabTitles; "VPSort")
 APPEND TO ARRAY:C911(_TabTitles; "VPConcatDocuments")
+APPEND TO ARRAY:C911(_TabTitles; "VPEvent")
+If (Application version:C493>="1950")
+	APPEND TO ARRAY:C911(_TabTitles; "VPRules")
+End if 
+Form:C1466.dragField:=""

@@ -54,7 +54,7 @@ Function getRight($cell : Object)->$nextCell : Object
 		$nextCol:=$range.column()
 	End if 
 	
-	$nextCell:=VP Cells($range.areaName(); $nextCol; $range.row(); $range.columnCount(); $range.rowCount()))
+	$nextCell:=VP Cells($range.areaName(); $nextCol; $range.row(); $range.columnCount(); $range.rowCount())
 	
 	// Returns the range of the next cell on the left
 Function getLeft($cell : Object)->$nextCell : Object

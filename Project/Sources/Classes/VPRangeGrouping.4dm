@@ -39,7 +39,6 @@ Function collapseColumns($column : Integer; $collapse : Boolean)
 	$js:=$js+"activeSheet.suspendPaint();"
 	$js:=$js+"var find = activeSheet.columnOutlines.find("+String:C10($column)+", 0);"
 	$js:=$js+"if (find!=null) find.state("+Choose:C955(Bool:C1537($collapse); "1"; "0")+");"
-	//$js:=$js+"activeSheet.columnOutlines.setCollapsed("+String($startColumn)+","+Choose(Bool($collapse); "true"; "false")+");"
 	$js:=$js+"activeSheet.resumePaint();"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
@@ -63,8 +62,7 @@ Function collapseRows($row : Integer; $collapse : Boolean)
 	$js:=This:C1470.activeSheet
 	$js:=$js+"activeSheet.suspendPaint();"
 	$js:=$js+"var find = activeSheet.rowOutlines.find("+String:C10($row)+", 0);"
-	$js:=$js+"if (find!=null) find.state("+Choose:C955(Bool:C1537($collapse); "1"; "0")+");"; 
-	//$js:=$js+"activeSheet.rowOutlines.setCollapsed("+String($startRow)+","+Choose(Bool($collapse); "true"; "false")+");"
+	$js:=$js+"if (find!=null) find.state("+Choose:C955(Bool:C1537($collapse); "1"; "0")+");"
 	$js:=$js+"activeSheet.resumePaint();"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
