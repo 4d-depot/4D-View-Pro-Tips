@@ -81,8 +81,12 @@ Function columnCount()->$columnc : Integer
 	
 	// Returns the sheet number of the current range
 Function sheet()->$sheet : Integer
-	If (This:C1470.isEmpty())
-		$sheet:=-1
+	var $js : Text
+	If (This:C1470.isEmpty() || (This:C1470.range.ranges[This:C1470._rangeNumber].sheet=Null:C1517))
+		$js:="(function (){"
+		$js:=$js+"return Utils.spread.getActiveSheetIndex();"
+		$js:=$js+"})();"
+		$sheet:=WA Evaluate JavaScript:C1029(*; This:C1470.range.area; $js; Is integer:K8:5)
 	Else 
 		$sheet:=Num:C11(This:C1470.range.ranges[This:C1470._rangeNumber].sheet)
 	End if 
