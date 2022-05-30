@@ -49,7 +49,7 @@ Function copyPast($fromRange : Object; $toRange : Object; $isCutting : Boolean)
 	$js:=$js+$tojs
 	$js:=$js+"var activeSheet=Utils.spread.getSheet("+String:C10($from.sheet())+");"
 	$js:=$js+"var toSheetName=Utils.spread.getSheet("+String:C10($to.sheet())+").name();"
-	$js:=$js+"spread.commandManager().execute({cmd: 'clipboardPaste', sheetName:toSheetName, fromSheet: activeSheet, fromRanges: fromRange, pastedRanges: toRange, isCutting: "+$isCuttingjs+", clipboardText: '', pasteOption: GC.Spread.Sheets.ClipboardPasteOption"+"s.all});"
+	$js:=$js+"Utils.spread.commandManager().execute({cmd: 'clipboardPaste', sheetName:toSheetName, fromSheet: activeSheet, fromRanges: fromRange, pastedRanges: toRange, isCutting: "+$isCuttingjs+", clipboardText: '', pasteOption: GC.Spread.Sheets.ClipboardPasteOption"+"s.all});"
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	

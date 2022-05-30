@@ -42,6 +42,38 @@ Function getLastNonEmptyCol()->$lastCol : Integer
 	$js:=$js+"})();"
 	$lastCol:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is integer:K8:5)
 	
+	
+	// Returns the last row with a value and the last column with a value.
+	// Does not take into account the style
+Function getLastColumnAndRowWithValue()->$lastCell : Object
+	
+	var $js; $answer : Text
+	
+	$js:="(function (){"
+	$js:=$js+"    try{"
+	$js:=$js+"    let sheet = Utils.currentSheet;"
+	$js:=$js+"    let json = sheet.toJSON();"
+	$js:=$js+"    let dataTable = Object.keys(json.data.dataTable);"
+	$js:=$js+"    let nonEmptyColIndex = 0;"
+	$js:=$js+"    let nonEmptyRowIndex = 0;"
+	$js:=$js+"    dataTable.forEach((row) => {"
+	$js:=$js+"      let rowArray = Object.keys(json.data.dataTable[row]);"
+	$js:=$js+"      rowArray.forEach((col) => {"
+	$js:=$js+"        if (json.data.dataTable[row][col].value!=undefined){"
+	$js:=$js+"          nonEmptyColIndex = Math.max(nonEmptyColIndex, col);"
+	$js:=$js+"          nonEmptyRowIndex = Number(row);"
+	$js:=$js+"        }"
+	$js:=$js+"      });"
+	$js:=$js+"    });"
+	$js:=$js+"    return {'column':nonEmptyColIndex,'row':nonEmptyRowIndex};"
+	$js:=$js+"}"
+	$js:=$js+"catch(error){"
+	$js:=$js+"    return {'column':0,'row':0};;"
+	$js:=$js+"}"
+	$js:=$js+"})();"
+	$lastCell:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is object:K8:27)
+	
+	
 	// Returns the range of the next cell on the right
 Function getRight($cell : Object)->$nextCell : Object
 	var $range : cs:C1710.VPRangeReader

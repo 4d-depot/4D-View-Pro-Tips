@@ -421,8 +421,8 @@
 				},
 				"Button10": {
 					"type": "button",
-					"text": "Select last cell",
-					"top": 88,
+					"text": "Select last cell value + style",
+					"top": 78,
 					"left": 43,
 					"width": 149,
 					"height": 18,
@@ -430,6 +430,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button10.4dm"
+				},
+				"Button50": {
+					"type": "button",
+					"text": "Select last cell value",
+					"top": 101,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button50.4dm"
 				}
 			}
 		},
@@ -731,7 +743,7 @@
 			}
 		}
 	],
-	"geometryStamp": 850,
+	"geometryStamp": 855,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
