@@ -326,6 +326,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button23.4dm"
+				},
+				"Button51": {
+					"type": "button",
+					"text": "Change culture",
+					"top": 88,
+					"left": 1023,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button51.4dm"
 				}
 			}
 		},
@@ -741,9 +753,49 @@
 					"method": "ObjectMethods/Button47.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button52": {
+					"type": "button",
+					"text": "Add comment \"test\"",
+					"top": 78,
+					"left": 56,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button52.4dm"
+				},
+				"Button53": {
+					"type": "button",
+					"text": "Get comment",
+					"top": 78,
+					"left": 208,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button53.4dm"
+				},
+				"Button54": {
+					"type": "button",
+					"text": "Remove comment",
+					"top": 78,
+					"left": 362,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button54.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 855,
+	"geometryStamp": 859,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

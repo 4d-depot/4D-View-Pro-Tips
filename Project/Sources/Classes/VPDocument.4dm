@@ -13,6 +13,7 @@ Function customCulture()
 	$js:=$js+"myCulture.NumberFormat.arrayGroupSeparator=';';"
 	$js:=$js+"myCulture.NumberFormat.arrayListSeparator=' << ';"
 	$js:=$js+"myCulture.NumberFormat.listSeparator=';';"
+	$js:=$js+"myCulture.NumberFormat.currencyPositivePattern=1;"
 	$js:=$js+"myCulture.DateTimeFormat.amDesignator='';"
 	$js:=$js+"myCulture.DateTimeFormat.pmDesignator='';"
 	$js:=$js+"myCulture.DateTimeFormat.abbreviatedMonthNames=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec',''];"
