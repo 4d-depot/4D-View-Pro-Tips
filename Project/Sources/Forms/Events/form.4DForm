@@ -793,9 +793,25 @@
 					"method": "ObjectMethods/Button54.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button55": {
+					"type": "button",
+					"text": "Show data context field list",
+					"top": 78,
+					"left": 56,
+					"width": 187,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button55.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 859,
+	"geometryStamp": 862,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

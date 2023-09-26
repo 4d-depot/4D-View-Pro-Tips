@@ -14,4 +14,5 @@ If (Application version:C493>="1950")
 	APPEND TO ARRAY:C911(_TabTitles; "VPRules")
 End if 
 APPEND TO ARRAY:C911(_TabTitles; "VPComments")
+APPEND TO ARRAY:C911(_TabTitles; "VPDataContext")
 Form:C1466.dragField:=""
