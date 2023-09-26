@@ -18,5 +18,5 @@ This project gives you examples of how to:
 * Group rows or cells
 * Sort columns or rows
 * Concatenate documents
-
-Version min: 4D v18 R6
+* Show data context schema in Ribbon to create templates
+Version min: 4D v19
