@@ -162,6 +162,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button36.4dm"
+				},
+				"Bouton": {
+					"type": "button",
+					"text": "document cleaner",
+					"top": 18,
+					"left": 267,
+					"width": 115,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Bouton.4dm"
 				}
 			}
 		},
@@ -811,7 +823,7 @@
 			}
 		}
 	],
-	"geometryStamp": 862,
+	"geometryStamp": 864,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
