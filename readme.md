@@ -19,4 +19,5 @@ This project gives you examples of how to:
 * Sort columns or rows
 * Concatenate documents
 * Show data context schema in Ribbon to create templates
+  
 Version min: 4D v19
