@@ -2,7 +2,7 @@ Class constructor()
 	
 Function cleanObject($object : Object) : Boolean
 	var $result : Boolean
-	var $sheets; $columns; $cells : Object
+	var $sheets; $columns; $cells; $cell : Object
 	var $sheetName; $columnName; $cellName : Text
 	var $formatter : Text
 	
