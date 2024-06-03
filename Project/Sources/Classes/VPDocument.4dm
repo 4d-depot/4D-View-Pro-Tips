@@ -9,7 +9,7 @@ Function customCulture()
 	$js:="var myCulture=new GC.Spread.Common.CultureInfo();"
 	$js:=$js+"myCulture.NumberFormat.currencySymbol='€';"
 	$js:=$js+"myCulture.NumberFormat.numberDecimalSeparator=',';"
-	$js:=$js+"myCulture.NumberFormat.numberGroupSeparator='.';"
+	$js:=$js+"myCulture.NumberFormat.numberGroupSeparator=' ';"
 	$js:=$js+"myCulture.NumberFormat.arrayGroupSeparator=';';"
 	$js:=$js+"myCulture.NumberFormat.arrayListSeparator=' << ';"
 	$js:=$js+"myCulture.NumberFormat.listSeparator=';';"

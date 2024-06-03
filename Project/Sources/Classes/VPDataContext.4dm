@@ -9,7 +9,7 @@ Class constructor($areaName : Text)
 	This:C1470.Schema.properties:=New object:C1471
 	
 	// Create the field list of the object past in paramter and show it in the ribbon
-Function ShowFieldList($data : Object)
+Function ShowFieldList($data : Object; $fieldListVisible : Boolean)
 	This:C1470.parseObject($data)
 	
 	// Get the JSON schema
@@ -17,8 +17,10 @@ Function ShowFieldList($data : Object)
 	
 	// JS to load the JSON schema in the UI, and enhance all entries
 	$js:="designer.setData('treeNodeFromJson', '"+$JSONSchema+"');"
-	$js+="designer.setData(\"FieldListVisible\", true);"
-	$js+="designer.refresh();"
+	If ($fieldListVisible)
+		$js+="designer.setData(\"FieldListVisible\", true);"
+		$js+="designer.refresh();"
+	End if 
 	
 	// Run the JS
 	$answer:=WA Evaluate JavaScript:C1029(*; "ViewProArea"; $js)

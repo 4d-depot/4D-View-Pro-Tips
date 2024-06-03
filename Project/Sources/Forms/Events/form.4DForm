@@ -821,9 +821,61 @@
 					"method": "ObjectMethods/Button55.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button56": {
+					"type": "button",
+					"text": "Column header",
+					"top": 78,
+					"left": 56,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button56.4dm"
+				},
+				"Button57": {
+					"type": "button",
+					"text": "Row header",
+					"top": 78,
+					"left": 208,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button57.4dm"
+				},
+				"Button58": {
+					"type": "button",
+					"text": "span col header",
+					"top": 78,
+					"left": 362,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button58.4dm"
+				},
+				"Button59": {
+					"type": "button",
+					"text": "span row header",
+					"top": 78,
+					"left": 520,
+					"width": 116,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button59.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 864,
+	"geometryStamp": 868,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
