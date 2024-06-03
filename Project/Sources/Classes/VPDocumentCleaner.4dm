@@ -2,55 +2,62 @@ Class constructor()
 	
 Function cleanObject($object : Object) : Boolean
 	var $result : Boolean
+	var $sheets; $columns; $cells; $cell : Object
+	var $sheetName; $columnName; $cellName : Text
+	var $formatter : Text
+	
 	$result:=False:C215
 	
-	If (Value type:C1509($object.spreadJS)=Is object:K8:27)
-		If (Value type:C1509($object.spreadJS.sheets)=Is object:K8:27)
-			ARRAY TEXT:C222($arraySheetNames; 0)
-			OB GET PROPERTY NAMES:C1232($object.spreadJS.sheets; $arraySheetNames)
-			var $i : Integer
-			For ($i; 1; Size of array:C274($arraySheetNames))
-				var $sheet : Object
-				$sheet:=$object.spreadJS.sheets[$arraySheetNames{$i}]
+	If ((Value type:C1509($object.spreadJS)=Is object:K8:27) && \
+		(Value type:C1509($object.spreadJS.sheets)=Is object:K8:27))
+		
+		$sheets:=$object.spreadJS.sheets
+		
+		For each ($sheetName; $sheets)
+			
+			If ((Value type:C1509($sheets[$sheetName].data)=Is object:K8:27) && \
+				(Value type:C1509($sheets[$sheetName].data.dataTable)=Is object:K8:27))
 				
-				If (Value type:C1509($sheet.data)=Is object:K8:27)
-					If (Value type:C1509($sheet.data.dataTable)=Is object:K8:27)
-						var $dataTable : Object
-						$dataTable:=$sheet.data.dataTable
+				$columns:=$sheets[$sheetName].data.dataTable
+				
+				If (Value type:C1509($columns)=Is object:K8:27)
+					
+					For each ($columnName; $columns)
 						
-						ARRAY TEXT:C222($arrayColumnsNames; 0)
-						OB GET PROPERTY NAMES:C1232($dataTable; $arrayColumnsNames)
-						var $j : Integer
-						For ($j; 1; Size of array:C274($arrayColumnsNames))
-							var $column : Object
-							$column:=$dataTable[$arrayColumnsNames{$j}]
+						$cells:=$columns[$columnName]
+						
+						If (Value type:C1509($cells)=Is object:K8:27)
 							
-							ARRAY TEXT:C222($arrayRowsNames; 0)
-							OB GET PROPERTY NAMES:C1232($column; $arrayRowsNames)
-							var $k : Integer
-							For ($k; 1; Size of array:C274($arrayRowsNames))
-								var $cell : Object
-								$cell:=$column[$arrayRowsNames{$k}]
+							For each ($cellName; $cells)
 								
-								If (Value type:C1509($cell.style)=Is object:K8:27)
-									If (Value type:C1509($cell.style.formatter)=Is text:K8:3)
-										var $formatter : Text
-										$formatter:=$cell.style.formatter
-										
-										If (Position:C15("@"; $formatter)#0)
-											If (Position:C15(";"; $formatter)#0)
-												$cell.style.formatter:="@"
-												$result:=True:C214
-											End if 
-										End if 
+								$cell:=$cells[$cellName]
+								
+								If ((Value type:C1509($cell)=Is object:K8:27) && \
+									(Value type:C1509($cell.style)=Is object:K8:27) && \
+									(Value type:C1509($cell.style.formatter)=Is text:K8:3))
+									
+									$formatter:=$cell.style.formatter
+									
+									If ((Position:C15("@"; $formatter)#0) && \
+										(Position:C15(";"; $formatter)#0))
+										$cell.style.formatter:="@"
+										$result:=True:C214
 									End if 
+									
 								End if 
-							End for 
-						End for 
-					End if 
+								
+							End for each 
+							
+						End if 
+						
+					End for each 
+					
 				End if 
-			End for 
-		End if 
+				
+			End if 
+			
+		End for each 
+		
 	End if 
 	
 	return $result
