@@ -20,6 +20,6 @@ This project gives you examples of how to:
 - Sort columns or rows
 - Concatenate documents
 - Show data context schema in Ribbon to create templates
-- Manage headers
+- Manage multi-lines headers
 
 Version min: 4D v19

@@ -166,10 +166,10 @@
 				"Bouton": {
 					"type": "button",
 					"text": "document cleaner",
-					"top": 18,
-					"left": 267,
+					"top": 12,
+					"left": 234,
 					"width": 115,
-					"height": 25,
+					"height": 18,
 					"events": [
 						"onClick"
 					],
@@ -546,6 +546,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button9.4dm"
+				},
+				"Button60": {
+					"type": "button",
+					"text": "Range intersect / contains",
+					"top": 78,
+					"left": 344,
+					"width": 180,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button60.4dm"
 				}
 			}
 		},
@@ -875,7 +887,7 @@
 			}
 		}
 	],
-	"geometryStamp": 868,
+	"geometryStamp": 878,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -4,7 +4,7 @@ Class constructor($areaName : Text)
 	
 	This:C1470._getOffset()
 	
-	// Copy the style of the original column/row during insertion
+	// Copy the style of the original column/row during manual insertions of rows or columns
 Function insertColumnAndRowWithStyle()
 	var $js; $answer : Text
 	
