@@ -53,4 +53,18 @@ Function copyPast($fromRange : Object; $toRange : Object; $isCutting : Boolean)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
+	// Returns the range corresponding to the letters of the cells passed in parameter
+Function cellLetterToRange($cellLetter : Text) : Object
+	var $js : Text
+	var $ranges : Collection
+	var $range : Object
+	
+	$js:="(function (){"
+	$js+="return GC.Spread.Sheets.CalcEngine.formulaToRanges(Utils.currentSheet,'"+$cellLetter+"');"
+	$js+="})();"
+	$ranges:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
+	$range:=$ranges[0].ranges[0]
+	
+	return VP Cells(This:C1470.areaName; $range.col; $range.row; $range.colCount; $range.rowCount)
+	
 	

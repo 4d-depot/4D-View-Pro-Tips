@@ -226,6 +226,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button4.4dm"
+				},
+				"Button61": {
+					"type": "button",
+					"text": "'C10:D11' to range",
+					"top": 88,
+					"left": 421,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button61.4dm"
 				}
 			}
 		},
@@ -887,7 +899,7 @@
 			}
 		}
 	],
-	"geometryStamp": 878,
+	"geometryStamp": 880,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
