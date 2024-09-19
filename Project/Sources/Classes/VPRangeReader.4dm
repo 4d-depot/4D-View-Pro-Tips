@@ -51,7 +51,7 @@ Function rowCount()->$rowc : Integer
 		If (This:C1470.range.ranges[This:C1470._rangeNumber].rowCount#Null:C1517)
 			$rowc:=Num:C11(This:C1470.range.ranges[This:C1470._rangeNumber].rowCount)
 		Else 
-			$rowc:=1
+			$rowc:=-1
 		End if 
 	End if 
 	
@@ -75,7 +75,7 @@ Function columnCount()->$columnc : Integer
 		If (This:C1470.range.ranges[This:C1470._rangeNumber].columnCount#Null:C1517)
 			$columnc:=Num:C11(This:C1470.range.ranges[This:C1470._rangeNumber].columnCount)
 		Else 
-			$columnc:=1
+			$columnc:=-1
 		End if 
 	End if 
 	

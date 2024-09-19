@@ -19,4 +19,4 @@ $VPDataContext:=cs:C1710.VPDataContext.new($area)
 VP SET DATA CONTEXT($area; $data)
 VP FLUSH COMMANDS($area)
 
-$VPDataContext.ShowFieldList(VP Get data context($area))
+$VPDataContext.ShowFieldList(VP Get data context($area); True:C214)

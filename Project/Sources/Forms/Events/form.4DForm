@@ -229,7 +229,7 @@
 				},
 				"Button61": {
 					"type": "button",
-					"text": "'C10:D11' to range",
+					"text": "'F:E' to range",
 					"top": 88,
 					"left": 421,
 					"width": 142,
@@ -238,6 +238,30 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button61.4dm"
+				},
+				"Button62": {
+					"type": "button",
+					"text": "'2:12' to range",
+					"top": 110,
+					"left": 421,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button62.4dm"
+				},
+				"Button63": {
+					"type": "button",
+					"text": "'C10:D11' to range",
+					"top": 67,
+					"left": 421,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button63.4dm"
 				}
 			}
 		},
@@ -899,7 +923,7 @@
 			}
 		}
 	],
-	"geometryStamp": 880,
+	"geometryStamp": 884,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
