@@ -60,18 +60,21 @@ Function cellLetterToRange($cellLetter : Text) : Object
 	var $range : Object
 	
 	$js:="(function (){"
-	$js:=$js+"return GC.Spread.Sheets.CalcEngine.formulaToRanges(Utils.currentSheet,'"+$cellLetter+"');"
+	$js:=$js+"let ranges=GC.Spread.Sheets.CalcEngine.formulaToRanges(Utils.currentSheet,'"+$cellLetter+"');"
+	$js:=$js+"ranges[0].sheetIndex=Utils.spread.getSheetIndex(ranges[0].sheetName);"
+	$js:=$js+"return ranges;"
 	$js:=$js+"})();"
 	$ranges:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
+	$sheetIndex:=$ranges[0].sheetIndex
 	$range:=$ranges[0].ranges[0]
 	Case of 
 		: (($range.colCount=-1) && ($range.rowCount=-1))
-			return VP All(This:C1470.areaName)
+			return VP All(This:C1470.areaName; $sheetIndex)
 		: ($range.col=-1)  // Entrée avec une plage de rows sans colonnes.
-			return VP Row(This:C1470.areaName; $range.row; $range.rowCount)
+			return VP Row(This:C1470.areaName; $range.row; $range.rowCount; $sheetIndex)
 		: ($range.row=-1)  // Entrée avec une plage de colonnes sans rows.
-			return VP Column(This:C1470.areaName; $range.col; $range.colCount)
+			return VP Column(This:C1470.areaName; $range.col; $range.colCount; $sheetIndex)
 		Else 
-			return VP Cells(This:C1470.areaName; $range.col; $range.row; $range.colCount; $range.rowCount)
+			return VP Cells(This:C1470.areaName; $range.col; $range.row; $range.colCount; $range.rowCount; $sheetIndex)
 	End case 
 	
