@@ -271,7 +271,7 @@
 					"type": "button",
 					"text": "Hide ribbon",
 					"top": 78,
-					"left": 293,
+					"left": 236,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -283,7 +283,7 @@
 					"type": "button",
 					"text": "Show ribbon",
 					"top": 101,
-					"left": 293,
+					"left": 236,
 					"width": 142,
 					"height": 18,
 					"events": [
@@ -319,7 +319,7 @@
 					"type": "button",
 					"text": "Hide sheet tabs",
 					"top": 78,
-					"left": 544,
+					"left": 622,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -331,7 +331,7 @@
 					"type": "button",
 					"text": "Show sheet tabs",
 					"top": 101,
-					"left": 544,
+					"left": 622,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -343,7 +343,7 @@
 					"type": "button",
 					"text": "Hide add sheet button",
 					"top": 78,
-					"left": 802,
+					"left": 822,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -355,7 +355,7 @@
 					"type": "button",
 					"text": "Show add sheet button",
 					"top": 101,
-					"left": 802,
+					"left": 822,
 					"width": 149,
 					"height": 18,
 					"events": [
@@ -386,6 +386,30 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button51.4dm"
+				},
+				"Button64": {
+					"type": "button",
+					"text": "Collapse ribbon",
+					"top": 78,
+					"left": 429,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button64.4dm"
+				},
+				"Button65": {
+					"type": "button",
+					"text": "Open ribbon",
+					"top": 101,
+					"left": 429,
+					"width": 142,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button65.4dm"
 				}
 			}
 		},
@@ -923,7 +947,7 @@
 			}
 		}
 	],
-	"geometryStamp": 884,
+	"geometryStamp": 960,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
