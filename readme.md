@@ -22,4 +22,4 @@ This project gives you examples of how to:
 - Show data context schema in Ribbon to create templates
 - Manage multi-lines headers
 
-Version min: 4D v19
+Version min: 4D v20

@@ -2,6 +2,26 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="4D View Pro Tips" uuid="AC914DC39C83E24EA457E9721FC95807" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
+	<table name="GraphExample" uuid="367837252F32EE44B0CD8EB6722A277B" id="1">
+		<field name="ID" uuid="24BBC256CAEA534199F84E8106F7C31D" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Quarter1" uuid="FA4CDE6DD087794C9BDFA4303EECF8CA" type="6" never_null="true" id="2"/>
+		<field name="Quarter2" uuid="D73FCE594195744DB8167F9751D7CDBE" type="6" never_null="true" id="3"/>
+		<field name="Quarter3" uuid="C448615E2C70974A9FAC0A819736AA28" type="6" never_null="true" id="4"/>
+		<field name="Quarter4" uuid="3539F3723BF1F54A93069EE4BE2DB6BD" type="6" never_null="true" id="5"/>
+		<field name="Label" uuid="92236F7597606C47BBD64C5067ECB707" type="10" limiting_length="255" never_null="true" id="6"/>
+		<primary_key field_name="ID" field_uuid="24BBC256CAEA534199F84E8106F7C31D"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="234" top="81" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="3D89DF2E80887142A46FC6F5D5327342" type="7">
+		<field_ref uuid="24BBC256CAEA534199F84E8106F7C31D" name="ID">
+			<table_ref uuid="367837252F32EE44B0CD8EB6722A277B" name="GraphExample"/>
+		</field_ref>
+	</index>
 	<base_extra>
 		<journal_file journal_file_enabled="true"/>
 	</base_extra>

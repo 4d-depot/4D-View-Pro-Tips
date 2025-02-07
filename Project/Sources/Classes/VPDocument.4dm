@@ -69,10 +69,10 @@ Function hideRibbon($hide : Boolean)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
-Function collapseRibbon($toBeCollapse : Boolean)
+Function RibbonOrToolbar($isAToolbar : Boolean)
 	var $js; $answer : Text
 	
-	$js:="designer.setConfig("+Lowercase:C14(String:C10($toBeCollapse))+" ? GC.Spread.Sheets.Designer.ToolBarModeConfig : GC.Spread.Sheets.Designer.DefaultConfig);"
+	$js:="designer.setConfig("+Lowercase:C14(String:C10($isAToolbar))+" ? GC.Spread.Sheets.Designer.ToolBarModeConfig : GC.Spread.Sheets.Designer.DefaultConfig);"
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	
 	

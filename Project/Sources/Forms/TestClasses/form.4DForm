@@ -389,7 +389,7 @@
 				},
 				"Button64": {
 					"type": "button",
-					"text": "Collapse ribbon",
+					"text": "Tool bar mode",
 					"top": 78,
 					"left": 429,
 					"width": 142,
@@ -401,7 +401,7 @@
 				},
 				"Button65": {
 					"type": "button",
-					"text": "Open ribbon",
+					"text": "Ribbon mode",
 					"top": 101,
 					"left": 429,
 					"width": 142,
