@@ -13,13 +13,7 @@ The graph is created by the interface
 and refers to the SelectedQuarterTableRow table
 ***********************************************/
 
-//var $context:={graph: ds.Graph.all().toCollection()}
-//$context.currentRow:=[$context.graph[0]]
-
-//// data context creation
-//VP SET DATA CONTEXT("ViewProArea"; $context)
-
-//// table paramteres
+// table parameters
 //$parameter:={tableColumns: []}
 //$parameter.tableColumns.push({name: "Label"; dataField: "Label"})
 //$parameter.tableColumns.push({name: "Quarter 1"; dataField: "Quarter1"})

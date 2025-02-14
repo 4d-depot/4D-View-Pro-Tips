@@ -14,4 +14,5 @@ APPEND TO ARRAY:C911(_TabTitles; "VPRules")
 APPEND TO ARRAY:C911(_TabTitles; "VPComments")
 APPEND TO ARRAY:C911(_TabTitles; "VPDataContext")
 APPEND TO ARRAY:C911(_TabTitles; "VPHeader")
+APPEND TO ARRAY:C911(_TabTitles; "CPCellType")
 Form:C1466.dragField:=""

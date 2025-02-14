@@ -945,9 +945,73 @@
 					"method": "ObjectMethods/Button59.4dm"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Button66": {
+					"type": "button",
+					"text": "Add button",
+					"top": 88,
+					"left": 43,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button66.4dm"
+				},
+				"Button67": {
+					"type": "button",
+					"text": "Add dropdown calculator",
+					"top": 88,
+					"left": 223,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button67.4dm"
+				},
+				"Button68": {
+					"type": "button",
+					"text": "Add dropdown calendar",
+					"top": 88,
+					"left": 400,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button68.4dm"
+				},
+				"Button69": {
+					"type": "button",
+					"text": "Add dropdown Color Picker",
+					"top": 88,
+					"left": 575,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button69.4dm"
+				},
+				"Button70": {
+					"type": "button",
+					"text": "Add dropdown list",
+					"top": 88,
+					"left": 768,
+					"width": 149,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button70.4dm"
+				}
+			}
 		}
 	],
-	"geometryStamp": 960,
+	"geometryStamp": 970,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
