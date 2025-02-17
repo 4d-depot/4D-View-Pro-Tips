@@ -63,3 +63,24 @@ Function addDropDown($cell : Object; $command : Text; $dropDowns : Collection)
 	
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
+Function applyTemplateToCells($numSheetTemplate : Integer; $renderRange : Object)
+	var $js; $answer : Text
+	
+	$js:="(function (){"
+	$js+="var templateSheet=Utils.spread.sheets["+String:C10($numSheetTemplate)+"];"
+	$js+="var rangeTemplateCelltype = new GC.Spread.Sheets.CellTypes.RangeTemplate(templateSheet);"
+	
+	var $range:=cs:C1710.VPRangeReader.new($renderRange)
+	
+	$js+="var renderSheet=Utils.spread.sheets["+String:C10($range.sheet())+"];"
+	$js+="renderSheet.getRange("+String:C10($range.row())+","+String:C10($range.column())+","+String:C10($range.rowCount())+","+String:C10($range.columnCount())+").cellType(rangeTemplateCelltype);"
+	$js+="})();"
+	
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	
+	
+	
+	
+	
+	

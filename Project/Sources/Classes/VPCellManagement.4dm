@@ -80,3 +80,15 @@ Function modifiedCells($reset : Boolean)->$cells : Collection
 		$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	End if 
 	
+	// assigns a specified object to a designated cell
+Function setObjectAsValue($cell : Object; $object : Object)
+	var $js; $answer : Text
+	
+	$cell:=cs:C1710.VPRangeReader.new($cell)
+	
+	$js:="(function (){"
+	$js:=$js+"Utils.spread.sheets["+String:C10($cell.sheet())+"].setValue("+String:C10($cell.row())+","+String:C10($cell.column())+","+JSON Stringify:C1217($object)+");"
+	$js:=$js+"})();"
+	
+	$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
+	

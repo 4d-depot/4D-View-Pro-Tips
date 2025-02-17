@@ -22,7 +22,7 @@ and refers to the SelectedQuarterTableRow table
 //$parameter.tableColumns.push({name: "Quarter 4"; dataField: "Quarter4"})
 //// table creation
 //VP CREATE TABLE(VP Cells("ViewProArea"; 0; 0; $parameter.tableColumns.length; 1); "QuarterTable"; "graph"; $parameter)
-//VP SET VALUE(VP Cell("ViewProArea"; 10; 0); {value: "Selecte Row"})
+//VP SET VALUE(VP Cell("ViewProArea"; 10; 0); {value: "Selected Row"})
 //VP CREATE TABLE(VP Cells("ViewProArea"; 10; 1; $parameter.tableColumns.length; 1); "SelectedQuarterTableRow"; "currentRow"; $parameter)
 
 //// Manage the row selection in the table

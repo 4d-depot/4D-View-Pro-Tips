@@ -1,0 +1,95 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"ViewProArea": {
+					"type": "view",
+					"left": 17,
+					"top": 91,
+					"width": 1393,
+					"height": 958,
+					"userInterface": "ribbon",
+					"withFormulaBar": true
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Console",
+					"top": 35,
+					"left": 1240,
+					"width": 170,
+					"height": 36,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "create template",
+					"top": 23,
+					"left": 17,
+					"width": 171,
+					"height": 36,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "export pdf",
+					"top": 25,
+					"left": 236,
+					"width": 241,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 19,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
