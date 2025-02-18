@@ -62,7 +62,7 @@ Function showFormula($show : Boolean)
 	
 	$answer:=WA Evaluate JavaScript:C1029(*; "ViewProArea"; "Utils.spread.getActiveSheet().options.showFormulas = "+Choose:C955(Bool:C1537($show); "true"; "false")+";")
 	
-	// returns all the cells modified from the last dirty bit reset
+	// Returns all the cells modified from the last dirty bit reset
 Function modifiedCells($reset : Boolean)->$cells : Collection
 	var $js; $answer : Text
 	
@@ -73,14 +73,14 @@ Function modifiedCells($reset : Boolean)->$cells : Collection
 	
 	$cells:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js; Is collection:K8:32)
 	
-	// reset dirty bit if asked
+	// Reset dirty bit if asked
 	If (Bool:C1537($reset))
 		$js:=This:C1470.activeSheet
 		$js:=$js+"activeSheet.clearPendingChanges();"
 		$answer:=WA Evaluate JavaScript:C1029(*; This:C1470.areaName; $js)
 	End if 
 	
-	// assigns a specified object to a designated cell
+	// Assigns a specified object to a designated cell
 Function setObjectAsValue($cell : Object; $object : Object)
 	var $js; $answer : Text
 	

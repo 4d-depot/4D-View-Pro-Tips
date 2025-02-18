@@ -41,7 +41,7 @@
 					"left": 17,
 					"top": 91,
 					"width": 1393,
-					"height": 958,
+					"height": 722,
 					"userInterface": "ribbon",
 					"withFormulaBar": true
 				},
@@ -84,7 +84,7 @@
 			}
 		}
 	],
-	"geometryStamp": 19,
+	"geometryStamp": 20,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
